@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------   ALTERING, MODIFYING, CHANGING STUFF IN ALREADY CREATED TABLES    -----------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- To change the name of the table (This also works if you want to "relocate" the table from one DB to another). DB_A is the initial location of your DB and so on with CHEMA_A and TABLE_A
+
+ALTER TABLE <DB_A>.<SCHEMA_A>.<TABLE_A> RENAME TO <DB_B>.<SCHEMA_B>.<TABLE_B>;
