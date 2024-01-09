@@ -12,9 +12,9 @@ Explore an assortment of carefully crafted Snowflake queries and scripts designe
 
 Why Choose my Cheat Sheets
 
- - Comprehensive Guidance: Tackle complex Snowflake challenges with ease, guided by our comprehensive cheat sheets.
+ - Comprehensive Guidance: Tackle complex Snowflake challenges with ease, guided by my comprehensive cheat sheets.
  - Efficiency Unleashed: Optimize your workflow with snippets and scripts that enhance your Snowflake experience.
- - Beginner Friendly: New to Snowflake? No worries! Our cheat sheets cater to all levels of expertise, ensuring a helping hand at every step.
+ - Beginner Friendly: New to Snowflake? No worries! My cheat sheets cater to all levels of expertise, ensuring a helping hand at every step.
 
 
 How to Use
