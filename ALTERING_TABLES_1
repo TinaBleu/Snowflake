@@ -2,6 +2,50 @@
 --------------------------------------------------------   ALTERING, MODIFYING, CHANGING STUFF IN ALREADY CREATED TABLES    -----------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- To change the name of the table (This also works if you want to "relocate" the table from one DB to another). DB_A is the initial location of your DB and so on with CHEMA_A and TABLE_A
+/* TABLE NAME CHANGE */
+
+-- To change the name of the table (This also works if you want to "relocate" the table from one DB to another). DB_A is the initial location of 
+-- your DB and so on with CHEMA_A and TABLE_A
 
 ALTER TABLE <DB_A>.<SCHEMA_A>.<TABLE_A> RENAME TO <DB_B>.<SCHEMA_B>.<TABLE_B>;
+
+--- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * --- * 
+
+/* DATATYPE CHANGE */
+
+-- To change from one datatype to another (Non synonymous) --
+-- First we have to create a new column with the new datatype
+
+ALTER TABLE <TABLE> ADD COLUMN NEW_COLUMN <data_type>
+
+e.g.
+
+ALTER TABLE TABLE_1 ADD COLUMN NEW_COLUMN NUMBER(0,3)
+
+-- After that we have to UPDATE our table information sending the data from our OLD_COLUMN (the one with the datatype that we want to 
+-- change) to the NEW_COLUMN (the column with the right datatype).
+
+UPDATE <table> SET <old_column> = <new_column> 
+
+e.g.
+
+UPDATE TABLE_1 SET OLD_COLUMN = NEW_COLUMN -- here there's no necessity to specify the datatype or anything.
+
+-- And last but not least, we can DROP the old_column and RENAME the new_column so everything stays in place as it was, but with 
+-- the right datatype. 
+
+
+
+
+
+
+
+I hope it helps!
+
+/*
+
+SOURCES:
+
+https://docs.snowflake.com/en/sql-reference/sql/alter-table-column
+
+*/
